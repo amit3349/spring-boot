@@ -11,4 +11,6 @@ import com.globomart.pojo.Product;
 public interface ProductRepository extends CrudRepository<Product,String> {
 	
 	public List<Product> findByType(String type);
+
+	public List<Product> findById(String id);
 }

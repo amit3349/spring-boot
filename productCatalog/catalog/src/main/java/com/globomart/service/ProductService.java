@@ -35,4 +35,11 @@ public class ProductService {
 		return products;
 	}
 
+	public Product getProductById(String id) {
+		List<Product> products = new ArrayList<Product>();
+		products = productRepository.findById(id);
+		if(products.size()>0) return products.get(0);
+		return null;
+	}
+
 }

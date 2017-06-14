@@ -25,6 +25,11 @@ public class ProductController {
 		return productService.getAllProduct();
 	}
 
+	@RequestMapping(value = "/list/{id}")
+	public Product getProductById(@PathVariable(value="id") String id) {
+		return productService.getProductById(id);
+	} 
+	
 	@RequestMapping(value = "/add", method=RequestMethod.POST)
 	public void addProduct(@RequestBody Product product) {
 		productService.addProduct(product);
